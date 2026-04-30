@@ -1,10 +1,10 @@
-import { Empty } from 'antd';
 import AppLayout from './components/AppLayout.jsx';
+import ProdutosPage from './pages/ProdutosPage.jsx';
 
 export default function App() {
   return (
     <AppLayout>
-      <Empty description="Em construção" />
+      <ProdutosPage />
     </AppLayout>
   );
 }
