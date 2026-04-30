@@ -1,15 +1,32 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Alert, Button, Card, Modal, Space, message } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
 import { useProdutos } from '../hooks/useProdutos';
 import ProdutosTable from '../components/ProdutosTable';
 import ProdutoFormModal from '../components/ProdutoFormModal';
+import SearchBar from '../components/SearchBar';
+import ImportCSVButton from '../components/ImportCSVButton';
 import { podeExcluir } from '../utils/validators';
 
 export default function ProdutosPage() {
   const { produtos, loading, error, create, update, remove } = useProdutos();
   const [editing, setEditing] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
+  const [search, setSearch] = useState('');
+  const [armazem, setArmazem] = useState('');
+
+  const filtered = useMemo(() => {
+    const term = search.trim().toLowerCase();
+    return produtos.filter((p) => {
+      const matchesTerm =
+        !term ||
+        p.nome?.toLowerCase().includes(term) ||
+        p.lote?.toLowerCase().includes(term) ||
+        p.endereco?.toLowerCase().includes(term);
+      const matchesArmazem = !armazem || p.armazem === armazem;
+      return matchesTerm && matchesArmazem;
+    });
+  }, [produtos, search, armazem]);
 
   const handleNew = () => {
     setEditing(null);
@@ -66,9 +83,12 @@ export default function ProdutosPage() {
     <Card
       title="Produtos"
       extra={
-        <Button type="primary" icon={<PlusOutlined />} onClick={handleNew}>
-          Novo Produto
-        </Button>
+        <Space>
+          <ImportCSVButton produtos={produtos} onCreate={create} />
+          <Button type="primary" icon={<PlusOutlined />} onClick={handleNew}>
+            Novo Produto
+          </Button>
+        </Space>
       }
     >
       {error && (
@@ -82,8 +102,14 @@ export default function ProdutosPage() {
       )}
 
       <Space direction="vertical" size="middle" style={{ width: '100%' }}>
+        <SearchBar
+          search={search}
+          armazem={armazem}
+          onChangeSearch={setSearch}
+          onChangeArmazem={setArmazem}
+        />
         <ProdutosTable
-          produtos={produtos}
+          produtos={filtered}
           loading={loading}
           onEdit={handleEdit}
           onDelete={handleDelete}
