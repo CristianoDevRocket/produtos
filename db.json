@@ -199,16 +199,6 @@
       "armazem": "Depósito Central",
       "lote": "L8034",
       "validade": "2026-10-03"
-    },
-    {
-      "nome": "Suco de Abacaxi",
-      "quantidade": 50,
-      "endereco": "Rua Caminho das Pedras, 845 -São Paulo",
-      "armazem": "Hub Zona Sul",
-      "lote": "L10077",
-      "codigo_barras": "100000000005555000",
-      "validade": "2027-04-30",
-      "id": 21
     }
   ]
 }

@@ -1,12 +1,13 @@
 import { useState } from 'react';
-import { Alert, Button, Card, Space, message } from 'antd';
+import { Alert, Button, Card, Modal, Space, message } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
 import { useProdutos } from '../hooks/useProdutos';
 import ProdutosTable from '../components/ProdutosTable';
 import ProdutoFormModal from '../components/ProdutoFormModal';
+import { podeExcluir } from '../utils/validators';
 
 export default function ProdutosPage() {
-  const { produtos, loading, error, create, update } = useProdutos();
+  const { produtos, loading, error, create, update, remove } = useProdutos();
   const [editing, setEditing] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -36,6 +37,31 @@ export default function ProdutosPage() {
     }
   };
 
+  const handleDelete = (produto) => {
+    if (!podeExcluir(produto)) {
+      Modal.warning({
+        title: 'Não é possível excluir',
+        content: `O produto "${produto.nome}" ainda possui ${produto.quantidade} unidade(s) em estoque. Zere a quantidade antes de excluir.`,
+      });
+      return;
+    }
+    Modal.confirm({
+      title: 'Excluir produto',
+      content: `Tem certeza que deseja excluir "${produto.nome}"?`,
+      okText: 'Excluir',
+      okButtonProps: { danger: true },
+      cancelText: 'Cancelar',
+      onOk: async () => {
+        try {
+          await remove(produto.id);
+          message.success('Produto excluído');
+        } catch {
+          message.error('Falha ao excluir');
+        }
+      },
+    });
+  };
+
   return (
     <Card
       title="Produtos"
@@ -56,7 +82,12 @@ export default function ProdutosPage() {
       )}
 
       <Space direction="vertical" size="middle" style={{ width: '100%' }}>
-        <ProdutosTable produtos={produtos} loading={loading} onEdit={handleEdit} />
+        <ProdutosTable
+          produtos={produtos}
+          loading={loading}
+          onEdit={handleEdit}
+          onDelete={handleDelete}
+        />
       </Space>
 
       <ProdutoFormModal
