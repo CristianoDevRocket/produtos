@@ -1,204 +1,214 @@
 {
-    "produtos": [
-        {
-            "id": 1,
-            "quantidade": 392,
-            "nome": "Detergente Líquido",
-            "endereco": "Av. Brasil, 28 - Osasco/SP",
-            "codigo_barras": "1150973443596",
-            "armazem": "Centro Logístico 1",
-            "lote": "L5047",
-            "validade": null
-        },
-        {
-            "id": 2,
-            "quantidade": 201,
-            "nome": "Água Sanitária",
-            "endereco": "Rua das Flores, 283 - Osasco/SP",
-            "codigo_barras": "8884450569642",
-            "armazem": "Depósito Central",
-            "lote": "L4701",
-            "validade": "2026-10-26"
-        },
-        {
-            "id": 3,
-            "quantidade": 195,
-            "nome": "Sabão em Pó",
-            "endereco": "Rua Augusta, 580 - Campinas/SP",
-            "codigo_barras": "5003806298487",
-            "armazem": "Hub Zona Sul",
-            "lote": "L1792",
-            "validade": null
-        },
-        {
-            "id": 4,
-            "quantidade": 175,
-            "nome": "Desinfetante",
-            "endereco": "Rua XV de Novembro, 356 - Guarulhos/SP",
-            "codigo_barras": "1780438064264",
-            "armazem": "Armazém A",
-            "lote": "L9565",
-            "validade": null
-        },
-        {
-            "id": 5,
-            "quantidade": 310,
-            "nome": "Esponja Multiuso",
-            "endereco": "Av. Paulista, 829 - São Paulo/SP",
-            "codigo_barras": "1897700991798",
-            "armazem": "Centro Logístico 1",
-            "lote": "L2376",
-            "validade": "2026-05-21"
-        },
-        {
-            "id": 6,
-            "quantidade": 383,
-            "nome": "Papel Higiênico",
-            "endereco": "Av. Brasil, 924 - Guarulhos/SP",
-            "codigo_barras": "2962818828055",
-            "armazem": "Hub Zona Sul",
-            "lote": "L9835",
-            "validade": null
-        },
-        {
-            "id": 7,
-            "quantidade": 421,
-            "nome": "Amaciante",
-            "endereco": "Av. Paulista, 102 - Osasco/SP",
-            "codigo_barras": "0822981379863",
-            "armazem": "Depósito Central",
-            "lote": "L9870",
-            "validade": null
-        },
-        {
-            "id": 8,
-            "quantidade": 220,
-            "nome": "Limpador Multiuso",
-            "endereco": "Rua das Flores, 429 - Osasco/SP",
-            "codigo_barras": "7272261615113",
-            "armazem": "Hub Zona Sul",
-            "lote": "L6559",
-            "validade": "2027-02-20"
-        },
-        {
-            "id": 9,
-            "quantidade": 105,
-            "nome": "Álcool 70%",
-            "endereco": "Rua das Flores, 650 - Santos/SP",
-            "codigo_barras": "7158211585535",
-            "armazem": "Depósito Central",
-            "lote": "L1781",
-            "validade": null
-        },
-        {
-            "id": 10,
-            "quantidade": 17,
-            "nome": "Sabonete Líquido",
-            "endereco": "Rua das Flores, 422 - São Paulo/SP",
-            "codigo_barras": "1576561753594",
-            "armazem": "Hub Zona Sul",
-            "lote": "L1072",
-            "validade": null
-        },
-        {
-            "id": 11,
-            "quantidade": 90,
-            "nome": "Café Torrado",
-            "endereco": "Rua das Flores, 663 - Osasco/SP",
-            "codigo_barras": "6284219624918",
-            "armazem": "Armazém A",
-            "lote": "L1004",
-            "validade": null
-        },
-        {
-            "id": 12,
-            "quantidade": 450,
-            "nome": "Açúcar Refinado",
-            "endereco": "Rua das Flores, 589 - Guarulhos/SP",
-            "codigo_barras": "1503700179342",
-            "armazem": "Armazém B",
-            "lote": "L6565",
-            "validade": "2026-08-12"
-        },
-        {
-            "id": 13,
-            "quantidade": 287,
-            "nome": "Arroz Tipo 1",
-            "endereco": "Rua XV de Novembro, 364 - Osasco/SP",
-            "codigo_barras": "1880708052297",
-            "armazem": "Armazém A",
-            "lote": "L2288",
-            "validade": null
-        },
-        {
-            "id": 14,
-            "quantidade": 462,
-            "nome": "Feijão Carioca",
-            "endereco": "Rua das Flores, 528 - Osasco/SP",
-            "codigo_barras": "8876134244146",
-            "armazem": "Hub Zona Sul",
-            "lote": "L5898",
-            "validade": null
-        },
-        {
-            "id": 15,
-            "quantidade": 260,
-            "nome": "Macarrão Espaguete",
-            "endereco": "Rua Augusta, 17 - Osasco/SP",
-            "codigo_barras": "4588831249508",
-            "armazem": "Hub Zona Sul",
-            "lote": "L5308",
-            "validade": null
-        },
-        {
-            "id": 16,
-            "quantidade": 411,
-            "nome": "Molho de Tomate",
-            "endereco": "Rua Augusta, 825 - São Paulo/SP",
-            "codigo_barras": "6915577898500",
-            "armazem": "Depósito Central",
-            "lote": "L7673",
-            "validade": "2026-08-22"
-        },
-        {
-            "id": 17,
-            "quantidade": 477,
-            "nome": "Leite Integral",
-            "endereco": "Rua Augusta, 251 - Guarulhos/SP",
-            "codigo_barras": "5119945372995",
-            "armazem": "Centro Logístico 1",
-            "lote": "L5478",
-            "validade": "2026-07-10"
-        },
-        {
-            "id": 18,
-            "quantidade": 64,
-            "nome": "Iogurte Natural",
-            "endereco": "Rua das Flores, 786 - Campinas/SP",
-            "codigo_barras": "2639716590978",
-            "armazem": "Hub Zona Sul",
-            "lote": "L7868",
-            "validade": null
-        },
-        {
-            "id": 19,
-            "quantidade": 360,
-            "nome": "Refrigerante Cola",
-            "endereco": "Rua XV de Novembro, 465 - Guarulhos/SP",
-            "codigo_barras": "6605405612155",
-            "armazem": "Depósito Central",
-            "lote": "L6748",
-            "validade": "2026-12-27"
-        },
-        {
-            "id": 20,
-            "quantidade": 209,
-            "nome": "Suco de Laranja",
-            "endereco": "Av. Paulista, 107 - Campinas/SP",
-            "codigo_barras": "4251611777580",
-            "armazem": "Depósito Central",
-            "lote": "L8034",
-            "validade": "2026-10-03"
-        }
-    ]
+  "produtos": [
+    {
+      "id": 1,
+      "quantidade": 392,
+      "nome": "Detergente Líquido",
+      "endereco": "Av. Brasil, 28 - Osasco/SP",
+      "codigo_barras": "1150973443596",
+      "armazem": "Centro Logístico 1",
+      "lote": "L5047",
+      "validade": null
+    },
+    {
+      "id": 2,
+      "quantidade": 201,
+      "nome": "Água Sanitária",
+      "endereco": "Rua das Flores, 283 - Osasco/SP",
+      "codigo_barras": "8884450569642",
+      "armazem": "Depósito Central",
+      "lote": "L4701",
+      "validade": "2026-10-26"
+    },
+    {
+      "id": 3,
+      "quantidade": 195,
+      "nome": "Sabão em Pó",
+      "endereco": "Rua Augusta, 580 - Campinas/SP",
+      "codigo_barras": "5003806298487",
+      "armazem": "Hub Zona Sul",
+      "lote": "L1792",
+      "validade": null
+    },
+    {
+      "id": 4,
+      "quantidade": 175,
+      "nome": "Desinfetante",
+      "endereco": "Rua XV de Novembro, 356 - Guarulhos/SP",
+      "codigo_barras": "1780438064264",
+      "armazem": "Armazém A",
+      "lote": "L9565",
+      "validade": null
+    },
+    {
+      "id": 5,
+      "quantidade": 310,
+      "nome": "Esponja Multiuso",
+      "endereco": "Av. Paulista, 829 - São Paulo/SP",
+      "codigo_barras": "1897700991798",
+      "armazem": "Centro Logístico 1",
+      "lote": "L2376",
+      "validade": "2026-05-21"
+    },
+    {
+      "id": 6,
+      "quantidade": 383,
+      "nome": "Papel Higiênico",
+      "endereco": "Av. Brasil, 924 - Guarulhos/SP",
+      "codigo_barras": "2962818828055",
+      "armazem": "Hub Zona Sul",
+      "lote": "L9835",
+      "validade": null
+    },
+    {
+      "id": 7,
+      "quantidade": 421,
+      "nome": "Amaciante",
+      "endereco": "Av. Paulista, 102 - Osasco/SP",
+      "codigo_barras": "0822981379863",
+      "armazem": "Depósito Central",
+      "lote": "L9870",
+      "validade": null
+    },
+    {
+      "id": 8,
+      "quantidade": 220,
+      "nome": "Limpador Multiuso",
+      "endereco": "Rua das Flores, 429 - Osasco/SP",
+      "codigo_barras": "7272261615113",
+      "armazem": "Hub Zona Sul",
+      "lote": "L6559",
+      "validade": "2027-02-20"
+    },
+    {
+      "id": 9,
+      "quantidade": 105,
+      "nome": "Álcool 70%",
+      "endereco": "Rua das Flores, 650 - Santos/SP",
+      "codigo_barras": "7158211585535",
+      "armazem": "Depósito Central",
+      "lote": "L1781",
+      "validade": null
+    },
+    {
+      "id": 10,
+      "quantidade": 17,
+      "nome": "Sabonete Líquido",
+      "endereco": "Rua das Flores, 422 - São Paulo/SP",
+      "codigo_barras": "1576561753594",
+      "armazem": "Hub Zona Sul",
+      "lote": "L1072",
+      "validade": null
+    },
+    {
+      "id": 11,
+      "quantidade": 100,
+      "nome": "Café Torrado",
+      "endereco": "Rua das Flores, 663 - Osasco/SP",
+      "codigo_barras": "6284219624918",
+      "armazem": "Armazém A",
+      "lote": "L1004",
+      "validade": null
+    },
+    {
+      "id": 12,
+      "quantidade": 450,
+      "nome": "Açúcar Refinado",
+      "endereco": "Rua das Flores, 589 - Guarulhos/SP",
+      "codigo_barras": "1503700179342",
+      "armazem": "Armazém B",
+      "lote": "L6565",
+      "validade": "2026-08-12"
+    },
+    {
+      "id": 13,
+      "quantidade": 287,
+      "nome": "Arroz Tipo 1",
+      "endereco": "Rua XV de Novembro, 364 - Osasco/SP",
+      "codigo_barras": "1880708052297",
+      "armazem": "Armazém A",
+      "lote": "L2288",
+      "validade": null
+    },
+    {
+      "id": 14,
+      "quantidade": 462,
+      "nome": "Feijão Carioca",
+      "endereco": "Rua das Flores, 528 - Osasco/SP",
+      "codigo_barras": "8876134244146",
+      "armazem": "Hub Zona Sul",
+      "lote": "L5898",
+      "validade": null
+    },
+    {
+      "id": 15,
+      "quantidade": 260,
+      "nome": "Macarrão Espaguete",
+      "endereco": "Rua Augusta, 17 - Osasco/SP",
+      "codigo_barras": "4588831249508",
+      "armazem": "Hub Zona Sul",
+      "lote": "L5308",
+      "validade": null
+    },
+    {
+      "id": 16,
+      "quantidade": 411,
+      "nome": "Molho de Tomate",
+      "endereco": "Rua Augusta, 825 - São Paulo/SP",
+      "codigo_barras": "6915577898500",
+      "armazem": "Depósito Central",
+      "lote": "L7673",
+      "validade": "2026-08-22"
+    },
+    {
+      "id": 17,
+      "quantidade": 477,
+      "nome": "Leite Integral",
+      "endereco": "Rua Augusta, 251 - Guarulhos/SP",
+      "codigo_barras": "5119945372995",
+      "armazem": "Centro Logístico 1",
+      "lote": "L5478",
+      "validade": "2026-07-10"
+    },
+    {
+      "id": 18,
+      "quantidade": 64,
+      "nome": "Iogurte Natural",
+      "endereco": "Rua das Flores, 786 - Campinas/SP",
+      "codigo_barras": "2639716590978",
+      "armazem": "Hub Zona Sul",
+      "lote": "L7868",
+      "validade": null
+    },
+    {
+      "id": 19,
+      "quantidade": 360,
+      "nome": "Refrigerante Cola",
+      "endereco": "Rua XV de Novembro, 465 - Guarulhos/SP",
+      "codigo_barras": "6605405612155",
+      "armazem": "Depósito Central",
+      "lote": "L6748",
+      "validade": "2026-12-27"
+    },
+    {
+      "id": 20,
+      "quantidade": 209,
+      "nome": "Suco de Laranja",
+      "endereco": "Av. Paulista, 107 - Campinas/SP",
+      "codigo_barras": "4251611777580",
+      "armazem": "Depósito Central",
+      "lote": "L8034",
+      "validade": "2026-10-03"
+    },
+    {
+      "nome": "Suco de Abacaxi",
+      "quantidade": 50,
+      "endereco": "Rua Caminho das Pedras, 845 -São Paulo",
+      "armazem": "Hub Zona Sul",
+      "lote": "L10077",
+      "codigo_barras": "100000000005555000",
+      "validade": "2027-04-30",
+      "id": 21
+    }
+  ]
 }

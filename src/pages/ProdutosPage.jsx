@@ -6,16 +6,33 @@ import ProdutosTable from '../components/ProdutosTable';
 import ProdutoFormModal from '../components/ProdutoFormModal';
 
 export default function ProdutosPage() {
-  const { produtos, loading, error, create } = useProdutos();
+  const { produtos, loading, error, create, update } = useProdutos();
+  const [editing, setEditing] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
+
+  const handleNew = () => {
+    setEditing(null);
+    setModalOpen(true);
+  };
+
+  const handleEdit = (produto) => {
+    setEditing(produto);
+    setModalOpen(true);
+  };
 
   const handleSubmit = async (payload) => {
     try {
-      await create(payload);
-      message.success('Produto criado');
+      if (editing) {
+        await update(editing.id, { ...editing, ...payload });
+        message.success('Produto atualizado');
+      } else {
+        await create(payload);
+        message.success('Produto criado');
+      }
       setModalOpen(false);
+      setEditing(null);
     } catch {
-      message.error('Falha ao criar produto');
+      message.error('Falha ao salvar produto');
     }
   };
 
@@ -23,7 +40,7 @@ export default function ProdutosPage() {
     <Card
       title="Produtos"
       extra={
-        <Button type="primary" icon={<PlusOutlined />} onClick={() => setModalOpen(true)}>
+        <Button type="primary" icon={<PlusOutlined />} onClick={handleNew}>
           Novo Produto
         </Button>
       }
@@ -39,13 +56,17 @@ export default function ProdutosPage() {
       )}
 
       <Space direction="vertical" size="middle" style={{ width: '100%' }}>
-        <ProdutosTable produtos={produtos} loading={loading} />
+        <ProdutosTable produtos={produtos} loading={loading} onEdit={handleEdit} />
       </Space>
 
       <ProdutoFormModal
         open={modalOpen}
+        produto={editing}
         produtos={produtos}
-        onCancel={() => setModalOpen(false)}
+        onCancel={() => {
+          setModalOpen(false);
+          setEditing(null);
+        }}
         onSubmit={handleSubmit}
       />
     </Card>
