@@ -51,8 +51,7 @@ export default function ProdutoFormModal({
       await onSubmit(payload);
       form.resetFields();
     } catch (err) {
-      // evita quebrar o modal se houver erro de validação
-      console.log(err);
+      if (!err?.errorFields) throw err;
     }
   };
 
